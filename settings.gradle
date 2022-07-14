@@ -1,0 +1,2 @@
+rootProject.name='RoomWithCoroutine'
+include ':app'

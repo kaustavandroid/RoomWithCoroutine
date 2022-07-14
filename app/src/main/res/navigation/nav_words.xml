@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_words"
+    app:startDestination="@id/wordListFragment">
+    <fragment
+        android:id="@+id/addWordFragment"
+        android:name="com.kgandroid.roomwithcoroutine.view.AddWordFragment"
+        android:label="AddWordFragment" >
+        <action
+            android:id="@+id/action_addWordFragment_to_wordListFragment"
+            app:destination="@id/wordListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/wordListFragment"
+        android:name="com.kgandroid.roomwithcoroutine.view.WordListFragment"
+        android:label="WordListFragment" >
+        <action
+            android:id="@+id/action_wordListFragment_to_addWordFragment"
+            app:destination="@id/addWordFragment" />
+        <action
+            android:id="@+id/action_wordListFragment_to_wordDetailFragment"
+            app:destination="@id/wordDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/wordDetailFragment"
+        android:name="com.kgandroid.roomwithcoroutine.view.WordDetailFragment"
+        android:label="WordDetailFragment" >
+        <argument
+            android:name="selected_word"
+            app:argType="com.kgandroid.roomwithcoroutine.data.Word" />
+        <action
+            android:id="@+id/action_wordDetailFragment_to_wordListFragment"
+            app:destination="@id/wordListFragment" />
+    </fragment>
+</navigation>

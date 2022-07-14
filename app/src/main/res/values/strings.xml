@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">RoomWithCoroutine</string>
+    <string name="insert_word">Enter a new word</string>
+    <string name="insert_description">Enter meaning</string>
+</resources>
